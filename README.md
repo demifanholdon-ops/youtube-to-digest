@@ -118,15 +118,13 @@ config.yaml ──→ Config Loader ──→ Pipeline Orchestrator
 
 ## FAQ
 
-### What's the difference from youtube-to-ebook?
+### What makes this different？
 
-`youtube-to-ebook` was a batch pipeline: fetch all videos → generate all articles → send one EPUB. `youtube-to-digest` adds:
-
-- **Curation**: Round-robin selection — one video per cycle, not everything at once
-- **Multi-distribution**: Feishu, Notion, RSS in addition to email/EPUB
-- **Multi-LLM**: Choose your AI backend (not just Anthropic)
-- **Smart filtering**: Pre-scan and topic filtering before full generation
-- **Interactive setup**: Guided wizard instead of manual config editing
+- **Curation-first, not batch**: Picks one video per cycle via round-robin rotation across your core channels — a daily highlight, not a firehose
+- **Deliver where you already work**: Feishu Docs, Notion databases, RSS feeds, or email+EPUB — not locked into a single format
+- **Your AI, your budget**: Switch between Anthropic Claude (best quality), DeepSeek (~1/20th cost), OpenAI, or free local Ollama — one line of config
+- **Smarter filtering**: Optional pre-scan generates TL;DR summaries and topic tags, with a blocklist to skip content you don't want
+- **Zero-config onboarding**: 6-step interactive wizard — no editing Python files or writing YAML by hand
 
 ### Does the AI call go through my Claude Code?
 
