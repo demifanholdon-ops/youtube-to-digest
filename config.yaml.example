@@ -1,0 +1,48 @@
+# ===========================================
+# youtube-digest — User Preferences
+# Rename this file to config.yaml.
+# No secrets in this file — all keys go in .env
+# ===========================================
+
+# === Core Channels ===
+# YouTube @handles you want in your digest
+channels:
+  - handle: "@Fireship"
+
+# === Frequency ===
+# daily | weekly | monthly
+frequency: daily
+
+# === Distribution Channels ===
+# Enable one or more — each needs its keys in .env
+distributors:
+  feishu: false
+  email: false
+  notion: false
+  rss: false
+
+# === LLM Backend ===
+# anthropic | deepseek | openai | ollama
+llm_backend: deepseek
+
+# Model name (depends on backend):
+#   anthropic: claude-sonnet-4-20250514
+#   deepseek:  deepseek-chat
+#   openai:    gpt-4o
+#   ollama:    llama3.1:8b
+llm_model: deepseek-chat
+
+# === Smart Content Filtering ===
+smart_filter:
+  enabled: false
+  # Topics to skip (case-insensitive match on AI-classified tags)
+  blocked_topics: []
+  # Skip videos producing articles shorter than this (words)
+  min_article_length: 300
+
+# === Content Quality ===
+content:
+  # Max tokens for AI article generation (per article)
+  max_tokens: 8000
+  # Output language: zh | en | auto (matches video language)
+  language: zh

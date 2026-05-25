@@ -1,0 +1,23 @@
+# Secrets — never commit
+.env
+
+# User preferences (may contain personal info like channel handles)
+config.yaml
+
+# Runtime data
+data/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# EPUBs / newsletters
+*.epub
+newsletters/
