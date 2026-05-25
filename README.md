@@ -126,9 +126,9 @@ config.yaml ──→ Config Loader ──→ Pipeline Orchestrator
 - **Smarter filtering**: Optional pre-scan generates TL;DR summaries and topic tags, with a blocklist to skip content you don't want
 - **Zero-config onboarding**: 6-step interactive wizard — no editing Python files or writing YAML by hand
 
-### Does the AI call go through my Claude Code?
+### How does the AI backend work?
 
-No. The Python code calls AI APIs directly. If you select DeepSeek, it calls `api.deepseek.com`. If you select Anthropic, it calls `api.anthropic.com`. These are completely independent from whatever backend Claude Code uses.
+You pick one AI provider in `config.yaml` — the pipeline calls its API directly (`api.deepseek.com`, `api.anthropic.com`, etc.) with your key. Nothing goes through any intermediate service.
 
 ### Are my API keys safe?
 
